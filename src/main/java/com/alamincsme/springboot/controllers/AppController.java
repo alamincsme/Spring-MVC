@@ -102,13 +102,13 @@ public class AppController {
 		p.setpName(programmer.getpName());
 		p.setpLan(programmer.getpLan());
 		programmerRepo.save(p);
+		programmerRepo.
 		return "programmer.html";
 	}
 //	@PostMapping("/addProgrammer")
 //	public String addProgrammer(@ModelAttribute Programmer programmer) {
 //		programmerRepo.save(programmer);
-//		return "programmer.html";
-//			
+//		return "programmer.html";	
 //	}
 	@ModelAttribute
 	public void welcome(Model m) {
