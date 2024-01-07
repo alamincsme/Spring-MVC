@@ -99,8 +99,8 @@ public class AppController {
 	@PostMapping("/updateProgrammer")
 	public String update(@ModelAttribute Programmer programmer) {
 		Programmer p   = programmerRepo.getById(programmer.getpId());
-		p.setpName("Subeen");
-		p.setpLan("python");
+		p.setpName(programmer.getpName());
+		p.setpLan(programmer.getpLan());
 		programmerRepo.save(p);
 		return "programmer.html";
 	}
