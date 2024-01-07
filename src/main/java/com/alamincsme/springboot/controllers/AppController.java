@@ -96,6 +96,7 @@ public class AppController {
 		return "redirect:/home";
 	}
 	
+	@PostMapping("/updateProgrammer")
 	public String update(@ModelAttribute Programmer programmer) {
 		Programmer p   = programmerRepo.getById(programmer.getpId());
 		p.setpName("Subeen");
