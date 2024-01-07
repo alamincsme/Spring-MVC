@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>This is home page.</title>
+</head>
+<body>
+    <p th:text="${message}"></p>
+
+	<form action="addProgrammer" method = "POST">
+		<h1>Welcome,Programmer Information.</h1>
+<!-- 		<h1>Programmer id</h1> -->
+<!-- 		<input type="text" name="pId" /> -->
+
+		<h1>Programmer Name</h1>
+		<input type="text" name="pName" />
+
+		<h1>Programmer Language</h1>
+		<input type="text" name="pLan" />
+
+		<button type="submit">Submit</button>
+	</form>
+	
+	
+	
+	
+	<hr>
+	<form action="findById" method = "POST">
+		<h1>Welcome,Programmer Information.</h1>
+		<h1>Programmer id</h1>
+		<input type="text" name="pId" />
+		<button type="submit">Submit</button>
+	</form>
+	
+	<hr>
+	<form action="dp" method = "POST">
+		<h1>Welcome,Programmer Information.</h1>
+		<h1>Programmer id</h1>
+		<input type="text" name="pId" />
+		<button type="submit">DeteteById</button>
+	</form>
+	
+</body>
+</html>
