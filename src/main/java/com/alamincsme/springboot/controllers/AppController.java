@@ -90,11 +90,11 @@ public class AppController {
 	}
 	
 	
-	@PostMapping("/dp")
-	public String deleteProgrammer(@RequestParam int pId) {
-		programmerRepo.deleteById(pId);
-		return "redirect:/home";
-	}
+//	@PostMapping("/dp")
+//	public String deleteProgrammer(@RequestParam int pId) {
+//		programmerRepo.deleteById(pId);
+//		return "redirect:/home";
+//	}
 	
 	@PostMapping("/updateProgrammer")
 	public String update(@ModelAttribute Programmer programmer) {
