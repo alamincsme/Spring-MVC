@@ -95,6 +95,14 @@ public class AppController {
 		programmerRepo.deleteById(pId);
 		return "redirect:/home";
 	}
+	
+	public String update(@ModelAttribute Programmer programmer) {
+		Programmer p   = programmerRepo.getById(programmer.getpId());
+		p.setpName("Subeen");
+		p.setpLan("python");
+		programmerRepo.save(p);
+		return "programmer.html";
+	}
 //	@PostMapping("/addProgrammer")
 //	public String addProgrammer(@ModelAttribute Programmer programmer) {
 //		programmerRepo.save(programmer);
