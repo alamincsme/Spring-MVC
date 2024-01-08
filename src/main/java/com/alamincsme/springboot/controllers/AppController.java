@@ -89,6 +89,12 @@ public class AppController {
 		return "programmer.html";
 	}
 	
+	@PostMapping("findByName")
+	public String findByName(@RequestParam String pName, Model model) {
+		List<Programmer> prolistList = programmerRepo.findBypName(pName);
+		model.addAttribute("programmers", prolistList);
+		return "allProgrammer.html" ;
+	}
 	
 //	@PostMapping("/dp")
 //	public String deleteProgrammer(@RequestParam int pId) {
