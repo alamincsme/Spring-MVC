@@ -89,13 +89,20 @@ public class AppController {
 		return "programmer.html";
 	}
 	
-	@PostMapping("findByName")
+//	@PostMapping("/findByName")
+//	public String findByName(@RequestParam String pName, Model model) {
+//		List<Programmer> prolistList = programmerRepo.findBypName(pName);
+//		model.addAttribute("programmers", prolistList);
+//		return "allProgrammer.html" ;
+//	}
+	
+	
+	@PostMapping("/findByName")
 	public String findByName(@RequestParam String pName, Model model) {
-		List<Programmer> prolistList = programmerRepo.findBypName(pName);
+		List<Programmer> prolistList = programmerRepo.findP(pName);
 		model.addAttribute("programmers", prolistList);
 		return "allProgrammer.html" ;
 	}
-	
 //	@PostMapping("/dp")
 //	public String deleteProgrammer(@RequestParam int pId) {
 //		programmerRepo.deleteById(pId);
